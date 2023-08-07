@@ -8,6 +8,7 @@ br { clear: left; }
 .ks { display: inline-block; width: 80px; font-weight: bold; font-style: italic; }
 .person { flex-basis: 120px; }
 .square { width: 16px; height: 16px; margin-top: 5px; float: left; margin-right: 8px; }
+.person:nth-child(2) .square { border: 1px solid #ccc; width: 14px; height: 14px; }
 .name { float: left; }
 
 #wrap { position: absolute; display: none; border: 1px solid black; background: #333c; text-align: center; }
