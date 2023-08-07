@@ -14,7 +14,6 @@ const follow = e => {
 };
 
 const show = (summary, src) => {
-  document.title = summary;
   if (!showing) {
     showing = true;
     document.querySelector('#summary').innerText = summary;
