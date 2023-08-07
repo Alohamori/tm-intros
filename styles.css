@@ -10,4 +10,4 @@ br { clear: left; }
 .square { width: 16px; height: 16px; margin-top: 5px; float: left; margin-right: 8px; }
 .name { float: left; }
 
-#wrap { position: absolute; display: none; border: 1px solid black; background: #3336; }
+#wrap { position: absolute; display: none; border: 1px solid black; background: #333c; text-align: center; }

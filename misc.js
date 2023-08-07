@@ -13,9 +13,11 @@ const follow = e => {
     wrap.style.top = (e.pageY + 10) + 'px';
 };
 
-const show = src => {
+const show = (summary, src) => {
+  document.title = summary;
   if (!showing) {
     showing = true;
+    document.querySelector('#summary').innerText = summary;
     wrap.style.display = 'block';
     clip.src = src;
     document.addEventListener('pointermove', follow);
@@ -30,7 +32,8 @@ const hide = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   for (const c of document.querySelectorAll('.cell')) {
-    c.onpointerenter = function() { show(c.parentNode.href); };
+    const summary = c.getAttribute('data-summary');
+    c.onpointerenter = function() { show(summary, c.parentNode.href); };
     c.onpointerleave = hide;
     c.oncontextmenu = function() { return false; };
   }
